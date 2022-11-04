@@ -5,15 +5,6 @@ local TextLabel = Instance.new("TextLabel")
 local toggle = false
 
 
-function Brickos()
-	task.wait(2)	
-	game:GetService("ReplicatedStorage").InfinityShared.lib.net.Network:FindFirstChild("CollectableBricks:OnPickup"):FireServer("1")
-
-
-end
-
-
-
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ResetOnSpawn = false
 
@@ -44,7 +35,8 @@ TextButton.MouseButton1Down:connect(function()
 		TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 	end
 	while toggle == true do
-		Brickos()
+		task.wait()
+		game:GetService("ReplicatedStorage").InfinityShared.lib.net.Network:FindFirstChild("CollectableBricks:OnPickup"):FireServer("1")
 	end
 end)
 
