@@ -6,7 +6,7 @@ local toggle = false
 
 
 function Brickos()
-	task.wait()	
+	task.wait(1)	
 	game:GetService("ReplicatedStorage").InfinityShared.lib.net.Network:FindFirstChild("CollectableBricks:OnPickup"):FireServer("1")
 
 
