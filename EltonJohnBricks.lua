@@ -6,18 +6,11 @@ local toggle = false
 
 
 function Brickos()
+	
+	game:GetService("ReplicatedStorage").InfinityShared.lib.net.Network:FindFirstChild("CollectableBricks:OnPickup"):FireServer("1")
 
-    for i, j in pairs(game:GetService("Workspace").PreShow.Spawners.CollectableBricks:GetChildren())do
-    	if j:IsA("Part") then
-    		game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = j.CFrame
-    	end
-    	wait(.1)
-    end
 
 end
-
-
-
 
 
 
