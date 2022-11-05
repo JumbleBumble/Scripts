@@ -71,7 +71,7 @@ TextButton.MouseButton1Down:connect(function()
     				[1] = v.Name
     			},
     			[2] = {
-    				["touched"] = {}
+    				["touched"] = {
     					[1] = v.Name
     				},
     				["distance"] = math.huge
