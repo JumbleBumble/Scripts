@@ -73,7 +73,7 @@ TextButton.MouseButton1Down:connect(function()
     				["touched"] = {
     					[1] = "4095ec2e-5cdd-4a47-85fd-8fa4139a1866"
     				},
-    				["distance"] = 23.444387435913086
+    				["distance"] = math.huge
     			}
     		}
     
