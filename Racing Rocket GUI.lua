@@ -57,7 +57,7 @@ TextButton.MouseButton1Down:connect(function()
 		task.wait()
 		local args = {
 			[1] = "ClickPower",
-			[2] = 99999999
+			[2] = 999
 		}
 
 		game:GetService("ReplicatedStorage").RemoteEvents.Rocket_RemoteEvent:FireServer(unpack(args))
