@@ -89,6 +89,7 @@ TextButton_2.MouseButton1Down:connect(function()
 	end
 	while toggle == true do
 		task.wait()
+		game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(60040, 190100.875, 60000)
 		local args = {
 			[1] = "CheckAdd",
 			[2] = 14,
