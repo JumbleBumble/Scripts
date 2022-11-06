@@ -75,7 +75,7 @@ TextButton.MouseButton1Down:connect(function()
 		TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 	end
 	while toggle == true do
-		task.wait(0.1)
+		task.wait(0.2)
 		game:GetService("ReplicatedStorage").RemoteEvents.RewardWins:FireServer()
 	end
 end)
