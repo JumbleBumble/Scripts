@@ -161,11 +161,11 @@ TextButton_3.MouseButton1Down:connect(function()
 	end
 	while toggle3 == true do
 	    task.wait(1)
-        local args = {
-            [1] = {}
-        }
-        
-        game:GetService("ReplicatedStorage").Framework.Modules.Shared.Internal.Modules:FindFirstChild("2 | Network").Remotes.s_controller_rebirth:InvokeServer(unpack(args))
+		local args = {
+		    [1] = {}
+		}
+
+		game:GetService("ReplicatedStorage").Framework.Modules.Shared.Internal.Modules:FindFirstChild("2 | Network").Remotes.s_controller_rebirth:InvokeServer(unpack(args))
 	end
 end)
 
@@ -244,13 +244,13 @@ TextButton_6.MouseButton1Down:connect(function()
 	end
 	while toggle6 == true do
 	    task.wait()
-        local args = {
-            [1] = {
-                [1] = "Jump Power"
-            }
-        }
-        
-        game:GetService("ReplicatedStorage").Framework.Modules.Shared.Internal.Modules:FindFirstChild("2 | Network").Remotes.s_controller_upgrade:InvokeServer(unpack(args))
+		local args = {
+		    [1] = {
+			[1] = "Jump Power"
+		    }
+		}
+
+		game:GetService("ReplicatedStorage").Framework.Modules.Shared.Internal.Modules:FindFirstChild("2 | Network").Remotes.s_controller_upgrade:InvokeServer(unpack(args))
 	end
 end)
 
