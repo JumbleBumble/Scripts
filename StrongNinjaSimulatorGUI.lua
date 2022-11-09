@@ -194,9 +194,9 @@ TextButton_4.MouseButton1Down:connect(function()
 	while toggle4 == true do
 	    task.wait()
 	    local checker = game:GetService("Players").LocalPlayer.character
-        if checker:FindFirstChild("Model") then
-            local Plr = game:GetService("Players").LocalPlayer
-            Plr.character.Model:Activate()
+            if checker:FindFirstChild("Model") then
+		    local Plr = game:GetService("Players").LocalPlayer
+		    Plr.character.Model:Activate()
         end
     end
 end)
