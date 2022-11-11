@@ -248,31 +248,6 @@ TextLabel_4.TextWrapped = true
 
 UICorner_13.Parent = TextLabel_4
 
-function getbitches()
- 	task.wait(2) 
-	local hoes = {
-		FanFire = fanfiretoggle, 
-		camShakeResist = 0, 
-		Spread = tonumber(SpreadBox.Text), 
-		prepTime = 0, 
-		equipTime = 0, 
-		MaxShots = tonumber(ShotsBox.Text), 
-		ReloadAnimationSpeed = 0, 
-		ReloadSpeed = tonumber(ReloadBox.Text), 
-		HipFireAccuracy = tonumber(SpreadBox.Text), 
-		ZoomAccuracy = tonumber(SpreadBox.Text), 
-		InstantFireAnimation = instantfiretoggle,
-		BulletSpeed = math.huge
-	}
-
-	for _, gun in pairs(require(game:GetService("ReplicatedStorage").GunScripts.GunStats)) do
-		for prop, value in pairs(hoes) do
-			if gun[prop] then
-				gun[prop] = value
-			end
-		end
-	end
-end
 
 while task.wait() do		
 	task.wait()
