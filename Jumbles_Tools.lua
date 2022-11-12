@@ -125,7 +125,7 @@ TextButton.MouseButton1Down:connect(function()
 		task.wait(TextBox.Text)
 		local playerHead = game.Players.LocalPlayer.Character.Head
 		for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-			if v.Name =="TouchInterest" then
+			if v.Name == "TouchInterest" then
 				firetouchinterest(playerHead, v.Parent, 0)
 				firetouchinterest(playerHead, v.Parent, 1)
 			end
