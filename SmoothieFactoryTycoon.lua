@@ -32,7 +32,6 @@ for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
 	if v.Name == "Owner" and v:isA"ObjectValue" then
 		if tostring(v.Value) == chad then
 			v.Parent.Name = "MegaChad"
-			print("Ready!")
 		end
 	end
 end
@@ -184,7 +183,6 @@ TextButton_2.MouseButton1Down:connect(function()
     		task.wait(1)
     		for i,v in pairs(game:GetService("Workspace").Tycoons.MegaChad:GetDescendants()) do  
     			if v:IsA("ProximityPrompt") then
-    			    print(v)
     				fireproximityprompt(v,100000)
     			end
     		end
