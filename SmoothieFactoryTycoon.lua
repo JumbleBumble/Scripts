@@ -225,8 +225,6 @@ end
 		for i,v in pairs(game:GetService("Workspace").Tycoons.MegaChad:GetDescendants()) do  
 			if v.Name == "TouchInterest" and v.Parent ~= "ExitPart" and v.Parent ~= "EntrancePart" then
 				firetouchinterest(playerHead, v.Parent, 0)
-				task.wait()
-				firetouchinterest(playerHead, v.Parent, 1)
 			end
 		end
 	end
