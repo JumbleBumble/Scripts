@@ -116,8 +116,8 @@ AutoGrabButton.MouseButton1Down:connect(function()
 	end
 	while toggle2 == true do
 	    for i,plr in next, game:GetService'Players':GetPlayers() do
-        if plr.Name:sub(1,#TextBox.Text) == TextBox.Text then
-        local hoe = plr.Name
+        	if plr.Name:sub(1,#TextBox.Text) == TextBox.Text then
+        	local hoe = plr.Name
 		task.wait()
 		local bitch = game:GetService("Workspace"):WaitForChild(hoe,9e99)
 		local player = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e99)
