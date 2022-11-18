@@ -1,0 +1,176 @@
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local ImageButton = Instance.new("ImageButton")
+local DropFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local DropShadowFrame = Instance.new("Frame")
+local AutoGrabButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local TextBox = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local MainShadowFrame = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local toggle1 = false
+local toggle2 = false
+local t = 10
+
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(234, 0, 0)
+MainFrame.Position = UDim2.new(0.12523365, 0, 0.309876531, 0)
+MainFrame.Size = UDim2.new(0, 104, 0, 22)
+MainFrame.Draggable = true
+MainFrame.Active = true
+
+UICorner.CornerRadius = UDim.new(0, 2)
+UICorner.Parent = MainFrame
+
+UIStroke.Parent = MainFrame
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 2.100
+
+ImageButton.Parent = MainFrame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Position = UDim2.new(0.82290405, 0, 0.0909091234, 0)
+ImageButton.Rotation = 180.000
+ImageButton.Size = UDim2.new(0, 18, 0, 18)
+ImageButton.Image = "rbxassetid://6720836177"
+ImageButton.MouseButton1Down:connect(function()
+	toggle = not toggle
+	if toggle == true then
+		ImageButton.Rotation = 90
+		DropFrame.Visible = true
+	end
+	if toggle == false then
+		ImageButton.Rotation = 180.00
+		DropFrame.Visible = false
+
+	end
+end)
+
+
+DropFrame.Name = "DropFrame"
+DropFrame.Parent = MainFrame
+DropFrame.BackgroundColor3 = Color3.fromRGB(234, 0, 0)
+DropFrame.Position = UDim2.new(-0.00961538497, 0, 1.30987549, 0)
+DropFrame.Size = UDim2.new(0, 104, 0, 49)
+DropFrame.Visible = false
+
+UICorner_2.CornerRadius = UDim.new(0, 2)
+UICorner_2.Parent = DropFrame
+
+UIStroke_2.Parent = DropFrame
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Thickness = 2.100
+
+DropShadowFrame.Name = "DropShadowFrame"
+DropShadowFrame.Parent = DropFrame
+DropShadowFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DropShadowFrame.Position = UDim2.new(0, 0, -0.0165305622, 0)
+DropShadowFrame.Size = UDim2.new(0, 105, 0, 49)
+DropShadowFrame.Style = Enum.FrameStyle.DropShadow
+
+TextBox.Parent = DropFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.451922923, 0, 0.183673471, 0)
+TextBox.Size = UDim2.new(0, 51, 0, 21)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+UICorner_4.Parent = TextBox
+
+AutoGrabButton.Name = "AutoGrabButton"
+AutoGrabButton.Parent = DropFrame
+AutoGrabButton.BackgroundColor3 = Color3.fromRGB(28, 29, 28)
+AutoGrabButton.BackgroundTransparency = 0.450
+AutoGrabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoGrabButton.Position = UDim2.new(0.0769228935, 0, 0.183673382, 0)
+AutoGrabButton.Size = UDim2.new(0, 31, 0, 31)
+AutoGrabButton.AutoButtonColor = false
+AutoGrabButton.Font = Enum.Font.FredokaOne
+AutoGrabButton.Text = "Auto TP"
+AutoGrabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoGrabButton.TextSize = 12.000
+AutoGrabButton.TextWrapped = true
+AutoGrabButton.MouseButton1Down:connect(function()
+	toggle2 = not toggle2
+	if toggle2 == true then
+		AutoGrabButton.TextColor3 = Color3.fromRGB(0, 255, 0)
+	end
+	if toggle2 == false then
+		AutoGrabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	end
+	while toggle2 == true do
+	    for i,plr in next, game:GetService'Players':GetPlayers() do
+        if plr.Name:sub(1,#TextBox.Text) == TextBox.Text then
+        local hoe = plr.Name
+		task.wait()
+		local bitch = game:GetService("Workspace"):WaitForChild(hoe,9e99)
+		local player = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e99)
+		player.CFrame = bitch:WaitForChild("HumanoidRootPart",9e99).CFrame
+        end
+	    end
+    end
+end)
+
+UICorner_3.CornerRadius = UDim.new(9, 2)
+UICorner_3.Parent = AutoGrabButton
+
+UIStroke_3.Parent = AutoGrabButton
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Thickness = 1.400
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+
+TextLabel.Parent = DropFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.528846323, 0, 0.612244904, 0)
+TextLabel.Size = UDim2.new(0, 33, 0, 18)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Set Speed^"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+MainShadowFrame.Name = "MainShadowFrame"
+MainShadowFrame.Parent = MainFrame
+MainShadowFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainShadowFrame.Position = UDim2.new(-0.00961538497, 0, 0, 0)
+MainShadowFrame.Size = UDim2.new(0, 86, 0, 22)
+MainShadowFrame.Style = Enum.FrameStyle.DropShadow
+
+TextLabel_2.Parent = MainFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(-0.00961538497, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 86, 0, 22)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "Jumble#1293"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+
+UICorner_5.CornerRadius = UDim.new(0, 2)
+UICorner_5.Parent = TextLabel_2
+
+while task.wait() do		
+	task.wait()
+	local hue = tick() % t / t
+	local colory = Color3.fromHSV(hue,1,1)	
+	TextLabel_2.TextColor3 = colory
+end
