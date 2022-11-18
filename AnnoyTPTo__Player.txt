@@ -115,10 +115,10 @@ AutoGrabButton.MouseButton1Down:connect(function()
 		AutoGrabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 	end
 	while toggle2 == true do
+	    task.wait()
 	    for i,plr in next, game:GetService'Players':GetPlayers() do
-        	if plr.Name:sub(1,#TextBox.Text) == TextBox.Text then
-        	local hoe = plr.Name
-		task.wait()
+            if plr.Name:sub(1,#TextBox.Text) == TextBox.Text then
+            local hoe = plr.Name
 		local bitch = game:GetService("Workspace"):WaitForChild(hoe,9e99)
 		local player = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart",9e99)
 		player.CFrame = bitch:WaitForChild("HumanoidRootPart",9e99).CFrame
