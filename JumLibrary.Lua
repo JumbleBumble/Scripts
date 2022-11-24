@@ -9,7 +9,8 @@ Example:
 local variablename = Library:CreateBar("ExampleText")
 
 variablename:CreateButton("ExampleText", function(state)
-    while state do
+    toggle = state
+    while toggle = true then
 	wait(1)
 	print("Hello World!") 
     end
