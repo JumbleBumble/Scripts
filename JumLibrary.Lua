@@ -10,7 +10,7 @@ local variablename = Library:CreateBar("ExampleText")
 
 variablename:CreateButton("ExampleText", function(state)
     toggle = state
-    while toggle = true then
+    while true do
 	wait(1)
 	print("Hello World!") 
     end
