@@ -1,12 +1,12 @@
 
 --[[
-Library:CreateBar(name)
+Library:CreateBar(name, canvas) --Canvas is just the size of the scrolling bar, the higher the number the more room you have
 CreateBar:CreateButton(text, func)
 CreateBar:CreateLabel(labeltext)
 
 Example:
 
-local variablename = Library:CreateBar("ExampleText")
+local variablename = Library:CreateBar("ExampleText", 1)
 
 variablename:CreateButton("ExampleText", function(state)
     toggle = state
