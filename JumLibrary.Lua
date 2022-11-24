@@ -216,7 +216,7 @@ function Library:CreateBar(name)
 
 end
 
-return Library
+
 
 
 
