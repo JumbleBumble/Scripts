@@ -126,7 +126,7 @@ function Library:CreateBar(name, canvas)
     ScrollingFrame.Position = UDim2.new(0.0490001328, 0, 0.280000001, 0)
     ScrollingFrame.Size = UDim2.new(0, 133, 0, 84)
     ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(9, 25, 255)
-    ScrollingFrame.CanvasSize = UDim2.new(0,canvas)
+    ScrollingFrame.CanvasSize = UDim2.new(0, 0, canvas, 0)
     ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
 
 
