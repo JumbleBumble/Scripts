@@ -20,7 +20,7 @@ variablename:CreateLabel("ExampleText")
 
 
 
-local Library = {}
+Library = {}
 
 function Library:CreateBar(name)
     local ScreenGui = Instance.new("ScreenGui")
