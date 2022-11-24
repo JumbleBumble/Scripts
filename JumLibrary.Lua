@@ -1,13 +1,12 @@
 
+
 --[[
 Library:CreateBar(name, canvas) --Canvas is just the size of the scrolling bar, the higher the number the more room you have
 CreateBar:CreateButton(text, func)
 CreateBar:CreateLabel(labeltext)
-
+CreateBar:CreateTextBox(placeholdertext)
 Example:
-
 local variablename = Library:CreateBar("ExampleText", 1)
-
 variablename:CreateButton("ExampleText", function(state)
     toggle = state
     while toggle do
@@ -16,7 +15,6 @@ variablename:CreateButton("ExampleText", function(state)
     end
 end)
 variablename:CreateLabel("ExampleText") 
-
 ]]--
 
 
@@ -180,8 +178,8 @@ function Library:CreateBar(name, canvas)
         UIStroke.Thickness = 1.700
 
         UIStroke.Parent = TextButton
-        UIStroke_4.Thickness = 2.400
-        UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        UIStroke.Thickness = 2.400
+        UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
         local function Fire()
             enabled = not enabled
@@ -211,6 +209,32 @@ function Library:CreateBar(name, canvas)
         TextLabel.Text = labeltext
     end
     
+
+    function AddLibrary:CreateTextBox(placeholdertext)
+        local TextBox = Instance.new("TextBox")
+
+        TextBox.Parent = ScrollingFrame
+        TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        TextBox.Position = UDim2.new(0.210526317, 0, 0.452380955, 0)
+        TextBox.Size = UDim2.new(0, 65, 0, 22)
+        TextBox.Font = Enum.Font.Ubuntu
+        TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+        TextBox.TextSize = 14.000
+        TextBox.TextScaled = true
+	TextBox.Text = ""
+        TextBox.PlaceholderText = placeholdertext
+
+        local UICorner = Instance.new("UICorner")
+
+        UICorner.Parent = TextBox
+
+    end
+
+
+
+
+
+
     return AddLibrary
    
 
@@ -218,6 +242,5 @@ function Library:CreateBar(name, canvas)
 end
 
 return Library
-
 
 
