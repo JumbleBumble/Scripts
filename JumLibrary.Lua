@@ -23,7 +23,7 @@ variablename:CreateLabel("ExampleText")
 
 Library = {}
 
-function Library:CreateBar(name)
+function Library:CreateBar(name, canvas)
     local ScreenGui = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
@@ -126,7 +126,7 @@ function Library:CreateBar(name)
     ScrollingFrame.Position = UDim2.new(0.0490001328, 0, 0.280000001, 0)
     ScrollingFrame.Size = UDim2.new(0, 133, 0, 84)
     ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(9, 25, 255)
-    ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.39999998, 0)
+    ScrollingFrame.CanvasSize = UDim2.new(canvas)
     ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.Always
 
 
